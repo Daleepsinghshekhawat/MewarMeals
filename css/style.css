@@ -9,7 +9,6 @@ body {
     background-color: #fffaf5;
     color: #333;
 }
-
 .navbar {
     background-color: #7b1e1e;
     padding: 15px 40px;
@@ -101,9 +100,23 @@ body {
 
 
 .hero {
-    background-color: #fbe6c2;
-    padding: 60px;
-    text-align: center;
+     height: 400px;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../images/banner-image.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 60px;
+  
+
 }
 
 .hero input {
