@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>MewarMeals | Taste of Royal Rajasthan</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src = "script.js"></script>
   </head>
   <body>
     <header class="navbar">
@@ -14,17 +15,35 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="cart.html" class="cart-btn">Cart</a>
-      </nav>
+   
+      <select>
+        <option>IND</option>
+        <option>USD</option>
+        <option>EUR</option>
+        <option>UGX</option>
+        <option>TWD</option>
+        <option>TZS</option>
+      </select>
+       </nav>
+</div>
     </header>
-
     <section class="hero">
       <h2>Taste of Royal Rajasthan</h2>
       <p>Authentic Rajasthani food delivered to your doorstep</p>
-      <input
+      <!-- <input
         type="text"
         name="search"
         placeholder="Search for dishes or restaurants"
-      /><button>Search</button>
+      /><button>Search</button> -->
+      <div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search dishes..."
+  />
+  <button id="searchBtn">Search</button>
+</div>
+
     </section>
     <main class="main-bg">
       <!-- <section class="section">
@@ -51,6 +70,9 @@
       <h4>Ghewar</h4>
     </div>
   </div>
+  <section>
+    <!-- add chach with masala  , kersangri sabzi, rabdi  -->
+  </section>
 </section>
 
       <section class="section">
@@ -149,5 +171,9 @@
 
       <p class="copyright">© 2025 MewarMeals All Rights Reserved.</p>
     </footer>
+    <fotter class="second"><p> For better experience,download the MewarMeals app now</p>
+    <a id=""><img src="/images/google playstore.png" alt="google playstore"></a> 
+     <a><img src="/images/apple store.png" alt="apple store"></a> 
+     </fotter>
   </body>
 </html>

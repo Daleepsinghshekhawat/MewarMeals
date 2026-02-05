@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<header class="navbar">
+<!-- <header class="navbar">
     <h1 class="logo">MewarMeals</h1>
 </header>
 
@@ -22,7 +22,31 @@
             <button>Add to Cart</button>
         </div>
     </div>
-</section>
+</section> -->
+<main>
+  <section id="menu-section">
+    <h2>Our Menu</h2>
+
+    <!-- Search and filter -->
+    <input type="text" id="search" placeholder="Search dishes..." />
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="vegetarian">Vegetarian</option>
+      <option value="non-vegetarian">Non-Vegetarian</option>
+    </select>
+
+    <!-- Menu container -->
+    <div id="menu-container"></div>
+
+    <!-- Cart section -->
+    <div id="cart">
+      <h3>Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="total-price">0</span></p>
+    </div>
+  </section>
+</main>
+
 
 </body>
 </html>
