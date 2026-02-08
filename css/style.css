@@ -189,6 +189,122 @@ body {
 .product-card button:hover {
   background-color: #b72c00;
 }
+
+/* aachar section  */
+
+
+
+/* Aachar section */
+.aachar-section {
+  padding: 50px 5%;
+  background: #fff7ee;
+  text-align: center;
+  overflow-x: hidden; /* kills horizontal scroll */
+}
+
+.section-title {
+  font-size: 30px;
+  color: #7a1f1f;
+}
+
+.section-subtitle {
+  margin: 8px 0 30px;
+  color: #555;
+}
+
+/* INLINE-BLOCK CONTAINER */
+.aachar-grid {
+  font-size: 0;       /* removes inline spacing gap */
+  max-width: 100%;
+}
+
+/* PRODUCT CARD */
+.aachar-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 240px;       /* fixed width to prevent overflow */
+  margin: 12px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 14px;
+}
+
+/* IMAGE – FIXED, SMALL, SAME FOR ALL */
+.aachar-card img {
+  width: 100%;
+  height: 120px;        /* 👈 key fix */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXT */
+.aachar-card h3 {
+  margin: 8px 0 4px;
+  font-size: 17px;
+  color: #8b0000;
+}
+
+.desc {
+  font-size: 13px;
+  color: #666;
+}
+
+/* PRICE & SPICE */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.spice {
+  font-size: 14px;
+}
+
+/* RATING */
+.rating {
+  color: #f39c12;
+  margin-bottom: 8px;
+}
+
+/* BUTTON */
+.cart-btn {
+  width: 100%;
+  padding: 8px;
+  background: #7a1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #a93226;
+}
+
 /* ================= WHY US ================= */
 .why-grid {
   display: grid;
