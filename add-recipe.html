@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Share Your Traditional Recipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="recipe-page">
+   <div class="recipe-container">
+
+    <h1 class="page-title">
+      🍲 Share Your Traditional Recipe
+    </h1>
+
+    <form id="recipeForm" class="recipe-form">
+      <div class="form-row">
+        <input type="text" id="recipeName" placeholder="Recipe Name" required>
+        <input type="text" id="authorName" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-row">
+        <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+        <textarea id="steps" placeholder="Cooking Steps" required></textarea>
+      </div>
+
+      <button type="submit" class="save-btn">Save Recipe</button>
+    </form>
+
+    <h2 class="section-title">📜 Shared Recipes</h2>
+    <div id="recipeList" class="recipe-list"></div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

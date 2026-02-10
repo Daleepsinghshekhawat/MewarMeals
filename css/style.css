@@ -326,6 +326,129 @@ body {
   transform: translateY(-5px);
 }
 
+.add-recipe-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #c45508;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===============================
+   RECIPE PAGE – PROFESSIONAL UI
+   =============================== */
+
+.recipe-page {
+  background: #fffaf5;
+  padding: 40px 15px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.recipe-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #7a2d00;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* ===== FORM CARD ===== */
+.recipe-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-row textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #c45508;
+  box-shadow: 0 0 0 2px rgba(196, 85, 8, 0.15);
+}
+
+/* ===== BUTTON ===== */
+.save-btn {
+  display: block;
+  margin: auto;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #c45508, #e47c2c);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== SHARED RECIPES ===== */
+.section-title {
+  font-size: 24px;
+  color: #7a2d00;
+  margin-bottom: 20px;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.recipe-card h3 {
+  color: #c45508;
+  margin-bottom: 6px;
+}
+
+.recipe-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+
+
+
+
 /* ================= DISH CARD (MENU PAGE) ================= */
 .dish-card {
   border: 1px solid #ddd;
