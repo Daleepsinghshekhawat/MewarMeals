@@ -98,6 +98,29 @@ body {
 }
 
 /* ================= SECTIONS ================= */
+.categories{
+  display :flex;
+  justify-content: space-around;
+  padding:20px;
+  margin:20px;
+  background-color: #922906;
+  color:white;
+}
+.categories a {
+  color:white;
+}
+
+.categories a:hover {
+  background-color: #e47c2c;
+}
+
+
+
+
+
+
+
+
 .section {
   padding: 40px;
 }
