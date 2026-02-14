@@ -98,20 +98,76 @@ body {
 }
 
 /* ================= SECTIONS ================= */
-.categories{
-  display :flex;
-  justify-content: space-around;
-  padding:20px;
-  margin:20px;
-  background-color: #922906;
-  color:white;
-}
-.categories a {
-  color:white;
+
+/* ===== THALI SECTION ===== */
+.thali-section {
+  background: #fdf6f0;
+  padding: 70px 8%;
 }
 
-.categories a:hover {
-  background-color: #e47c2c;
+.thali-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* THALI IMAGE */
+.thali-img img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.thali-img img:hover {
+  transform: scale(1.03);
+}
+
+/* TEXT SIDE */
+.thali-text {
+  max-width: 500px;
+}
+
+.thali-text h2 {
+  font-size: 36px;
+  color: #8B1E1E;
+  margin-bottom: 20px;
+}
+
+.thali-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.thali-text span {
+  color: #8B1E1E;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.thali-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #8B1E1E, #a52a2a);
+  color: white;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.thali-btn:hover {
+  background: linear-gradient(135deg, #a52a2a, #8B1E1E);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(139, 30, 30, 0.3);
 }
 
 
