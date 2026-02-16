@@ -26,6 +26,10 @@ body {
 .logo {
   color: #f5c16c;
 }
+.navbar a:hover{ 
+  background-color: #e47c2c;
+
+}
 
 .navbar a {
   color: white;
@@ -42,10 +46,10 @@ body {
 
 /* ================= HERO ================= */
 .hero {
-  height: 400px;
+  height: 500px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../images/banner-image.jpg");
+    url("../images/banners.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -172,7 +176,7 @@ body {
 
 
 
-
+/* aachar section  */
 
 
 
@@ -296,6 +300,7 @@ body {
 .aachar-grid {
   font-size: 0;       /* removes inline spacing gap */
   max-width: 100%;
+
 }
 
 /* PRODUCT CARD */
@@ -311,6 +316,14 @@ body {
   position: relative;
   font-size: 14px;
   box-sizing: border-box;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.aachar-card:hover{
+    transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* BADGE */
@@ -525,6 +538,36 @@ body {
   margin-bottom: 6px;
 }
 
+/*  add Loved by Families */
+
+.review-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.review-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b45309; /* warm food theme */
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.review-buttons button:hover {
+  background-color: #92400e;
+  transform: scale(1.05);
+}
+
+.love-count {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #444;
+}
 
 
 
