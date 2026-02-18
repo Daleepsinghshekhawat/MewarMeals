@@ -588,6 +588,17 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+
+/* for menu file  */
+#menu-section{
+ font-size: 40px;
+ margin-left:500px
+   /* padding:80px ; */
+}
+
+
+
+
 /* ================= FOOTER ================= */
 footer {
   background: #7b1e1e;
