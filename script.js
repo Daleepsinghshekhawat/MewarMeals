@@ -1,21 +1,22 @@
-
-
-
-
-
-
-
-
-
-
 // js for  Loved by Families
-
+console.log("JS FILE LOADED");
 // Love Counter
+var ch=document.getElementById("chapati")
+// console.log("je")
+
+console.log(ch)
+
 let loveCount = 0;
-const loveBtn = document.getElementById("loveBtn");
+const love = document.getElementById("loveBtn");
+
+console.log(love)
 const loveDisplay = document.getElementById("loveCount");
 
-loveBtn.addEventListener("click", () => {
+console.log(loveDisplay);
+console.log("mphio");
+
+
+love.addEventListener("click", () => {
   loveCount++;
   loveDisplay.textContent = loveCount;
 });

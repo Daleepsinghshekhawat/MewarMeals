@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabzi Store</title>
+  <link rel="stylesheet" href="/css/sabzi.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>🥗 Fresh Sabzi Menu</h1>
+    <div class="cart-box">
+      🛒 Items: <span id="cart-count">0</span> |
+      Total: ₹<span id="total-price">0</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Choose Your Favourite Sabzi</h2>
+    <p>Fresh, Homemade & Healthy Indian Vegetables</p>
+  </section>
+
+  <!-- Sabzi Products -->
+  <section >
+
+<div class="products">
+    <!-- Sabzi 1 -->
+    <div class="card">
+      <img src="/images/sabzi.jpg" alt="Aloo Sabzi">
+      <h3>Aloo Sabzi</h3>
+      <p>Delicious potato curry with spices</p>
+      <h4>₹60</h4>
+      <div class="btn-group">
+        <button onclick="changeQty('Aloo Sabzi', 60, -1)">-</button>
+        <span id="qty-Aloo Sabzi">0</span>
+        <button onclick="changeQty('Aloo Sabzi', 60, 1)">+</button>
+      </div>
+    </div>
+
+    <!-- Sabzi 2 -->
+    <div class="card">
+      <img src="/images/sabzi.jpg" alt="Paneer Butter Masala">
+      <h3>Paneer Butter Masala</h3>
+      <p>Creamy paneer in rich gravy</p>
+      <h4>₹120</h4>
+      <div class="btn-group">
+        <button onclick="changeQty('Paneer Butter Masala', 120, -1)">-</button>
+        <span id="qty-Paneer Butter Masala">0</span>
+        <button onclick="changeQty('Paneer Butter Masala', 120, 1)">+</button>
+      </div>
+    </div>
+
+    <!-- Sabzi 3 -->
+    <div class="card">
+      <img src="/images/sabzi.jpg" alt="Mixed Veg">
+      <h3>Mixed Veg</h3>
+      <p>Healthy mix of seasonal vegetables</p>
+      <h4>₹80</h4>
+      <div class="btn-group">
+        <button onclick="changeQty('Mixed Veg', 80, -1)">-</button>
+        <span id="qty-Mixed Veg">0</span>
+        <button onclick="changeQty('Mixed Veg', 80, 1)">+</button>
+      </div>
+    </div>
+
+    <!-- Sabzi 4 -->
+    <div class="card">
+      <img src="/images/sabzi.jpg" alt="Bhindi Masala">
+      <h3>Bhindi Masala</h3>
+      <p>Spicy ladyfinger masala</p>
+      <h4>₹70</h4>
+      <div class="btn-group">
+        <button onclick="changeQty('Bhindi Masala', 70, -1)">-</button>
+        <span id="qty-Bhindi Masala">0</span>
+        <button onclick="changeQty('Bhindi Masala', 70, 1)">+</button>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    let cart = {};
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    function changeQty(name, price, change) {
+      if (!cart[name]) {
+        cart[name] = { qty: 0, price: price };
+      }
+
+      cart[name].qty += change;
+
+      if (cart[name].qty < 0) {
+        cart[name].qty = 0;
+      }
+
+      document.getElementById("qty-" + name).innerText = cart[name].qty;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById("cart-list");
+      cartList.innerHTML = "";
+      totalItems = 0;
+      totalPrice = 0;
+
+      for (let item in cart) {
+        if (cart[item].qty > 0) {
+          const li = document.createElement("li");
+          const itemTotal = cart[item].qty * cart[item].price;
+          li.innerHTML = `
+            ${item} (x${cart[item].qty}) - ₹${itemTotal}
+            <button onclick="removeItem('${item}')">Remove</button>
+          `;
+          cartList.appendChild(li);
+
+          totalItems += cart[item].qty;
+          totalPrice += itemTotal;
+        }
+      }
+
+      document.getElementById("cart-count").innerText = totalItems;
+      document.getElementById("total-price").innerText = totalPrice;
+    }
+
+    function removeItem(name) {
+      cart[name].qty = 0;
+      document.getElementById("qty-" + name).innerText = 0;
+      updateCart();
+    }
+
+    function clearCart() {
+      cart = {};
+      totalItems = 0;
+      totalPrice = 0;
+      document.getElementById("cart-list").innerHTML = "";
+      document.getElementById("cart-count").innerText = 0;
+      document.getElementById("total-price").innerText = 0;
+
+      const qtySpans = document.querySelectorAll("[id^='qty-']");
+      qtySpans.forEach(span => span.innerText = 0);
+    }
+  </script>
+
+</body>
+</html>

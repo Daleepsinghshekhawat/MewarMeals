@@ -26,9 +26,8 @@ body {
 .logo {
   color: #f5c16c;
 }
-.navbar a:hover{ 
+.navbar a:hover {
   background-color: #e47c2c;
-
 }
 
 .navbar a {
@@ -49,7 +48,7 @@ body {
   height: 500px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../images/banners.jpg");
+    url("../../images/banners.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -103,59 +102,40 @@ body {
 
 /* ================= SECTIONS ================= */
 
-.categories{
-  padding:20px;
+.categories {
+  padding: 20px;
 }
 
-
-
-
-.first{
-  display :flex;
-  gap:20px;
-  padding:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-  
+.first {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.one{
+.one {
   background: white;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
-  width:200px;
-  text-align:center;
+  width: 200px;
+  text-align: center;
   box-shadow: 5px 5px 10px black;
-    transition:
+  transition:
     transform 0.3s,
     box-shadow 0.3s;
 }
 
-.one img{
-  width:100%;
-  height:150px;
+.one img {
+  width: 100%;
+  height: 150px;
   object-fit: cover;
 }
 
 .one:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* ===== THALI SECTION ===== */
 .thali-section {
@@ -193,7 +173,7 @@ body {
 
 .thali-text h2 {
   font-size: 36px;
-  color: #8B1E1E;
+  color: #8b1e1e;
   margin-bottom: 20px;
 }
 
@@ -205,14 +185,14 @@ body {
 }
 
 .thali-text span {
-  color: #8B1E1E;
+  color: #8b1e1e;
   font-weight: 600;
 }
 
 /* BUTTON */
 .thali-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #8B1E1E, #a52a2a);
+  background: linear-gradient(135deg, #8b1e1e, #a52a2a);
   color: white;
   padding: 14px 32px;
   font-size: 18px;
@@ -223,17 +203,12 @@ body {
 }
 
 .thali-btn:hover {
-  background: linear-gradient(135deg, #a52a2a, #8B1E1E);
+  background: linear-gradient(135deg, #a52a2a, #8b1e1e);
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(139, 30, 30, 0.3);
 }
 
-
-
 /* aachar section  */
-
-
-
 
 .section {
   padding: 40px;
@@ -244,7 +219,6 @@ body {
   margin-bottom: 30px;
   color: #7b1e1e;
   text-align: center;
-  
 }
 
 /* ================= POPULAR DISHES ================= */
@@ -330,8 +304,6 @@ body {
 
 /* aachar section  */
 
-
-
 /* Aachar section */
 .aachar-section {
   padding: 50px 5%;
@@ -352,21 +324,20 @@ body {
 
 /* INLINE-BLOCK CONTAINER */
 .aachar-grid {
-  font-size: 0;       /* removes inline spacing gap */
+  font-size: 0; /* removes inline spacing gap */
   max-width: 100%;
-
 }
 
 /* PRODUCT CARD */
 .aachar-card {
   display: inline-block;
   vertical-align: top;
-  width: 240px;       /* fixed width to prevent overflow */
+  width: 240px; /* fixed width to prevent overflow */
   margin: 12px;
   padding: 14px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   position: relative;
   font-size: 14px;
   box-sizing: border-box;
@@ -375,8 +346,8 @@ body {
     box-shadow 0.3s;
 }
 
-.aachar-card:hover{
-    transform: translateY(-5px);
+.aachar-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -395,7 +366,7 @@ body {
 /* IMAGE – FIXED, SMALL, SAME FOR ALL */
 .aachar-card img {
   width: 100%;
-  height: 120px;        /* 👈 key fix */
+  height: 120px; /* 👈 key fix */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -511,7 +482,7 @@ body {
   background: #ffffff;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
 }
 
@@ -553,12 +524,14 @@ body {
   border-radius: 30px;
   font-size: 15px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .save-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== SHARED RECIPES ===== */
@@ -578,7 +551,7 @@ body {
   background: #ffffff;
   padding: 18px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-card h3 {
@@ -623,9 +596,6 @@ body {
   color: #444;
 }
 
-
-
-
 /* ================= DISH CARD (MENU PAGE) ================= */
 .dish-card {
   border: 1px solid #ddd;
@@ -642,16 +612,12 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 /* for menu file  */
-#menu-section{
- font-size: 40px;
- margin-left:500px
-   /* padding:80px ; */
+#menu-section {
+  font-size: 40px;
+  margin-left: 500px;
+  /* padding:80px ; */
 }
-
-
-
 
 /* ================= FOOTER ================= */
 footer {
