@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="signup-body">
+
+
+
+    <div class="signup-container  signup-container-card">
+        
+        <h1 class="signup-h1">Mewar Meals</h1>
+        <p class="signup-subtitle">Taste of Rajasthan</p>
+      
+    <form id="signupform" autocomplete="off">
+        <label class="signup-label"  for="name">Name </label>
+        <input   class="signup-input" type="text" id ="name" placeholder="Name" 
+        minlength="3" name="username" required >
+        <br>
+
+
+        <label class="signup-label" for="email">Email </label>
+        <input class="signup-input" type="email" id ="email" placeholder="Enter your email" name="email" required >
+        <br>
+
+        <label class="signup-label" for="password"> Password</label>
+        <input class="signup-input" type="password"  id="password" name ="user_pass"    minlength="8" placeholder="enter password"
+          pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+           title="Must contain at least 8 characters, 1 uppercase letter, and 1 number"
+           autocomplete="new-password"
+            required  >
+            <br>
+            
+        <label class="signup-label" for="confirm">Confirm password</label>
+        <input class="signup-input" type="password" id="confirm" placeholder="confirm password" required>
+       
+          <br>
+
+        <button  class="signup-button"     type="submit" onclick="check()">Signup</button>
+
+        <h2>Already have an account?<br> 
+        <a href="login.html">Login</a></h2>
+
+
+
+
+
+    </form>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

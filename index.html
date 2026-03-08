@@ -19,6 +19,7 @@
 
       <a href="#para">aachar</a>
       <a href="cart.html" class="cart-btn">Cart</a>
+      <button id="logout">Logout</button>
     </nav>
     </div>
   </header>
@@ -124,6 +125,125 @@
       </section>
     </section>
 
+
+
+
+
+    <!-- Prebuild thali  Section -->
+
+
+    
+    <section class="section prebuild-thali">
+      <h3 class="section-title">Pre-Built Royal Thalis</h3>
+
+      <div class="thali-grid">
+        <div class="thali-card">
+          <img src="/images/tha.jpg" alt="Royal Thali" />
+          <h4>Royal Thali</h4>
+          <p>From <span>Rs. 799.00</span></p>
+          <button>Add to Cart</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- sweets section -->
+
+    <section class="section">
+  <h3 class="section-title">Royal Sweets of Rajasthan</h3>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="../images/kajukatli.jpg" alt="Kaju Katli" />
+      <h4>Kaju Katli</h4>
+      <p>From <span>Rs. 713.00</span></p>
+      <button onclick="addtocart('kajukatli',713)">Add to Cart</button>
+    </div>
+     
+     <div class="product-card">
+            <img src="../images/Milk_Cake.jpg" alt="Milk Cake" />
+            <h4>Milk Cake</h4>
+            <p>From <span>Rs. 500.00</span></p>
+            <button onclick="addtocart('milkcake',500)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/dilkhuskar.jpg" alt="dilkhuskar" />
+            <h4>DILKHUSKAR</h4>
+            <p>From <span>Rs. 600.00</span></p>
+            <button onclick="addtocart('dilkhuskar',600)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/ghewar.jpg" alt="ghewar" />
+            <h4>Ghewar</h4>
+            <p>From <span>Rs. 512.00</span></p>
+            <button onclick="addtocart('ghewar',512)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/mava-kachori.jpg" alt="mava-kachori" />
+            <h4>Mava Kachori</h4>
+            <p>From <span>Rs. 100.00</span></p>
+            <button onclick="addtocart('mava-kachori',100)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/methi-phini.jpg" alt="methi-pheni" />
+            <h4>Methi Phini</h4>
+            <p>From <span>Rs. 210.00</span></p>
+            <button onclick="addtocart('methi-phini',210)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/Moong-Dal-Halwa.jpg" alt="moongdal halwa" />
+            <h4>Moong Dal Halwa</h4>
+            <p>From <span>Rs. 240.00</span></p>
+            <button onclick="addtocart('moong-dal-halwa',240)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/pede.jpg" alt="pede" />
+            <h4>Pede</h4>
+            <p>From <span>Rs. 480.00</span></p>
+            <button onclick="addtocart('pede',480)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/rasgulla-sweet.jpg" alt="rasgulla" />
+            <h4>Rasgulla</h4>
+            <p>From <span>Rs. 680.00</span></p>
+            <button  onclick="addtocart('rasgulla',680)">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="../images/Sohan-Halwa.jpg" alt="sohan halwa" />
+            <h4>Sohan Halwa</h4>
+            <p>From <span>Rs. 580.00</span></p>
+            <button onclick="addtocart('sohan halwa',580)">Add to Cart</button>
+          </div>
+        </div>
+    <!-- </section> -->
+    
+
+  </div>
+</section>
+
+    
+
     <!-- aachar section  -->
 
     <section  id="para" class="aachar-section">
@@ -147,7 +267,7 @@
           </div>
 
           <div class="rating">⭐⭐⭐⭐☆</div>
-          <button class="cart-btn">Add to Cart</button>
+          <button class="cart-btn" onclick="addtocart('ker sangri aachar',299)">Add to Cart</button>
         </div>
 
         <!-- Card 2 -->
@@ -163,7 +283,7 @@
           </div>
 
           <div class="rating">⭐⭐⭐⭐⭐</div>
-          <button class="cart-btn">Add to Cart</button>
+          <button onclick="addtocart('lassora aachar',249)" class="cart-btn">Add to Cart</button>
         </div>
 
         <!-- Card 3 -->
@@ -179,7 +299,7 @@
           </div>
 
           <div class="rating">⭐⭐⭐⭐☆</div>
-          <button class="cart-btn">Add to Cart</button>
+          <button onclick="addtocart('aam ka aachar',199)"class="cart-btn">Add to Cart</button>
         </div>
 
         <!-- Card 5 -->
@@ -195,7 +315,7 @@
           </div>
 
           <div class="rating">⭐⭐⭐⭐⭐</div>
-          <button class="cart-btn">Add to Cart</button>
+          <button onclick="addtocart('hari mirchi aachar',189)"class="cart-btn">Add to Cart</button>
         </div>
 
         <!-- Card 6 -->
@@ -211,7 +331,7 @@
           </div>
 
           <div class="rating">⭐⭐⭐⭐☆</div>
-          <button class="cart-btn">Add to Cart</button>
+          <button onclick="adddtocart('nimbu aachar',169)"class="cart-btn">Add to Cart</button>
         </div>
 
       </div>
@@ -276,6 +396,13 @@
     <a><img src="/../images/google playstore.png" alt="Google Play"></a>
     <a><img src="/../images/apple store.png" alt="Apple Store"></a>
   </footer>
+  <script>
+    // to prevent access to index.html without login
+    let loggedIn = localStorage.getItem("loggedIn");
+    if(!loggedIn){
+      window.location.href ="login.html";
+    }
+  </script>
   <script src="/script.js"></script>
 
 
