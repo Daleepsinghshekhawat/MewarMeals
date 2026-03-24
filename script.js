@@ -1,12 +1,8 @@
-
-
-
-// js for login and signup page 
+// js for login and signup page
 
 const Signupform = document.getElementById("signupform");
-if(Signupform){
-  Signupform
-  .addEventListener("submit", function (event) {
+if (Signupform) {
+  Signupform.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
     let email = document.getElementById("email").value;
@@ -34,104 +30,61 @@ if(Signupform){
   });
 }
 
-
 //-------------- login code
 
 const loginForm = document.getElementById("loginform");
-if(loginForm){
-  loginForm.addEventListener("submit",function(e){
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let Email = document.getElementById("email-login").value.trim().toLowerCase();
+    let Email = document
+      .getElementById("email-login")
+      .value.trim()
+      .toLowerCase();
     let Password = document.getElementById("password-login").value.trim();
 
     let storedUser = JSON.parse(localStorage.getItem("user"));
 
-     if (!storedUser) {
-       alert("No account found. Please signup first.");
-       return;
-     }
-    if(Email === storedUser.email && Password === storedUser.password){
-       localStorage.setItem("loggedIn", true);
+    if (!storedUser) {
+      alert("No account found. Please signup first.");
+      return;
+    }
+    if (Email === storedUser.email && Password === storedUser.password) {
+      localStorage.setItem("loggedIn", true);
       alert("login Successfull");
       window.location.href = "index.html";
-    }
-    else{
+    } else {
       alert("Invalid email or password. Please try again.");
     }
-   });
-  }
-  // localStorage.clear();
-
-  // js for logut button
-
-  document.getElementById("logout").addEventListener("click", function () {
-    localStorage.removeItem("loggedIn");
-    alert("You have been logged out.");
-    window.location.href = "login.html";
   });
+}
+// localStorage.clear();
 
+// js for logut button
 
+document.getElementById("logout").addEventListener("click", function () {
+  localStorage.removeItem("loggedIn");
+  alert("You have been logged out.");
+  window.location.href = "login.html";
+});
 
+// add to cart js
+function addtocart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let item = {
+    name: name,
+    price: price,
+  };
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(name + " has been added to your cart!");
+}
 
-
-
-  // add to cart js 
-  function addtocart(name,price){
-    let cart = JSON.parse(localStorage.getItem("cart"))||[];
-    let item = {
-      name:name,
-      price:price,
-    };
-    cart.push(item);
-    localStorage.setItem("cart",JSON.stringify(cart));
-    alert(name + " has been added to your cart!");
-  }
-
-//  clear the cart item 
-  function clearCart() {
-    localStorage.removeItem("cart");
-    location.reload();
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  clear the cart item
+function clearCart() {
+  localStorage.removeItem("cart");
+  location.reload();
+}
 
 // js for  Loved by Families
 console.log("JS FILE LOADED");
@@ -177,4 +130,41 @@ shareBtn.addEventListener("click", () => {
     alert("Thanks for sharing your thoughts! 😊");
     console.log("User Thought:", thought);
   }
+});
+
+//js for day night button
+let btn = document.getElementById("day");
+
+btn.addEventListener("click", () => {
+  btn.style.borderRadius = "50%";
+  btn.style.width = "40px";
+  btn.style.height = "40px";
+  if (document.body.style.background === "black") {
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+    btn.textContent = "🌙";
+  } else {
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+    btn.textContent = "☀️";
+  }
+});
+
+
+// before buy to check whether user login or not
+let buyBtn = document.querySelectorAll(".cart-btn");
+
+
+// fake login status (for demo)
+let isLoggedIn = false;
+
+buyBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+  if (!isLoggedIn) {
+    alert("Please login first");
+    window.location.href = "login.html"; // redirect
+  } else {
+    alert("Proceed to checkout");
+  }
+});
 });
