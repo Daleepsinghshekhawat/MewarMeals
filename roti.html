@@ -1,90 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chapati Store</title>
-  <link rel="stylesheet" href="roti.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapati Store</title>
+    <link rel="stylesheet" href="roti.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>🍽️ Fresh Chapati Store</h1>
+      <div class="cart">
+        🛒 Cart: <span id="cart-count">0</span> | ₹<span id="total-price"
+          >0</span
+        >
+      </div>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <h1>🍽️ Fresh Chapati Store</h1>
-    <div class="cart">
-      🛒 Cart: <span id="cart-count">0</span> | ₹<span id="total-price">0</span>
-    </div>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Hot & Fresh Chapatis</h2>
+      <p>Made with love & pure wheat flour</p>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Hot & Fresh Chapatis</h2>
-    <p>Made with love & pure wheat flour</p>
-  </section>
+    <!-- Product Section -->
+    <section class="products">
+      <!-- Chapati Item 1 -->
+      <div class="card">
+        <img
+          src="https:/images.unsplash.com/photo-1601050690597-df0568f70950"
+          alt="Plain Chapati"
+        />
+        <h3>Plain Chapati</h3>
+        <p>Soft and fresh homemade chapati</p>
+        <h4>₹10</h4>
+        <button onclick="addToCart(10, 'Plain Chapati')">Add to Cart</button>
+      </div>
 
-  <!-- Product Section -->
-  <section class="products">
+      <!-- Chapati Item 2 -->
+      <div class="card">
+        <img
+          src="https:/images.unsplash.com/photo-1613145997970-db84a7975fbb"
+          alt="Butter Chapati"
+        />
+        <h3>Butter Chapati</h3>
+        <p>Chapati with pure butter</p>
+        <h4>₹15</h4>
+        <button onclick="addToCart(15, 'Butter Chapati')">Add to Cart</button>
+      </div>
 
-    <!-- Chapati Item 1 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Plain Chapati">
-      <h3>Plain Chapati</h3>
-      <p>Soft and fresh homemade chapati</p>
-      <h4>₹10</h4>
-      <button onclick="addToCart(10, 'Plain Chapati')">Add to Cart</button>
-    </div>
+      <!-- Chapati Item 3 -->
+      <div class="card">
+        <img
+          src="https:/images.unsplash.com/photo-1631452180519-c014fe946bc7"
+          alt="Tandoori Roti"
+        />
+        <h3>Tandoori Roti</h3>
+        <p>Clay oven cooked roti</p>
+        <h4>₹20</h4>
+        <button onclick="addToCart(20, 'Tandoori Roti')">Add to Cart</button>
+      </div>
+    </section>
 
-    <!-- Chapati Item 2 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1613145997970-db84a7975fbb" alt="Butter Chapati">
-      <h3>Butter Chapati</h3>
-      <p>Chapati with pure butter</p>
-      <h4>₹15</h4>
-      <button onclick="addToCart(15, 'Butter Chapati')">Add to Cart</button>
-    </div>
+    <!-- Cart Items Section -->
+    <section class="cart-items">
+      <h2>Your Cart</h2>
+      <ul id="cart-list"></ul>
+    </section>
 
-    <!-- Chapati Item 3 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Tandoori Roti">
-      <h3>Tandoori Roti</h3>
-      <p>Clay oven cooked roti</p>
-      <h4>₹20</h4>
-      <button onclick="addToCart(20, 'Tandoori Roti')">Add to Cart</button>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Chapati Store | Fresh Indian Meals</p>
+    </footer>
 
-  </section>
+    <!-- JavaScript -->
+    <script>
+      let cartCount = 0;
+      let totalPrice = 0;
+      const cartList = document.getElementById("cart-list");
 
-  <!-- Cart Items Section -->
-  <section class="cart-items">
-    <h2>Your Cart</h2>
-    <ul id="cart-list"></ul>
-  </section>
+      function addToCart(price, name) {
+        cartCount++;
+        totalPrice += price;
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Chapati Store | Fresh Indian Meals</p>
-  </footer>
+        // Update UI
+        document.getElementById("cart-count").innerText = cartCount;
+        document.getElementById("total-price").innerText = totalPrice;
 
-  <!-- JavaScript -->
-  <script>
-    let cartCount = 0;
-    let totalPrice = 0;
-    const cartList = document.getElementById("cart-list");
-
-    function addToCart(price, name) {
-      cartCount++;
-      totalPrice += price;
-
-      // Update UI
-      document.getElementById("cart-count").innerText = cartCount;
-      document.getElementById("total-price").innerText = totalPrice;
-
-      // Add item to list
-      const li = document.createElement("li");
-      li.textContent = name + " - ₹" + price;
-      cartList.appendChild(li);
-    }
-  </script>
-
-</body>
+        // Add item to list
+        const li = document.createElement("li");
+        li.textContent = name + " - ₹" + price;
+        cartList.appendChild(li);
+      }
+    </script>
+  </body>
 </html>
